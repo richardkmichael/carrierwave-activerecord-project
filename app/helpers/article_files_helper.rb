@@ -1,0 +1,2 @@
+module ArticleFilesHelper
+end

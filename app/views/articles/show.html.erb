@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @article.title %>
+</p>
+
+<p>
+  <b>File:</b>
+  <a href='<%= "#{@url_prefix}#{@article.file}" %>'><%= "#{@url_prefix}#{@article.file}" %></a>
+</p>
+
+
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Back', articles_path %>
