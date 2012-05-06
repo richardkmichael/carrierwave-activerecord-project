@@ -3,8 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.3'
 gem 'sqlite3'
 gem 'jquery-rails'
-gem 'carrierwave', :git => '/Users/rmichael/Documents/Personal/Source/carrierwave', :branch => 'carrierwave-database'
-# gem 'carrierwave', :git => 'git://github.com/richardkmichael/carrierwave.git', :branch => 'carrierwave-database'
+gem 'carrierwave', :git => '/Users/rmichael/Documents/Personal/Source/carrierwave', :branch => 'carrierwave-activerecord'
+# gem 'carrierwave', :git => 'git://github.com/richardkmichael/carrierwave.git', :branch => 'carrierwave-activerecord'
 gem 'mini_magick'
 
 group :assets do

@@ -1,7 +1,7 @@
 GIT
   remote: /Users/rmichael/Documents/Personal/Source/carrierwave
-  revision: 2abb683e6d21665370a1e6f51da7940ad7e5db03
-  branch: carrierwave-database
+  revision: c07d4533861827e2eb78973c3c13fad8fd71c4c6
+  branch: carrierwave-activerecord
   specs:
     carrierwave (0.6.2)
       activemodel (>= 3.2.0)
