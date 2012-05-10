@@ -6,7 +6,7 @@ class ArticleFileUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
-  include CarrierWave::MiniMagick
+  # include CarrierWave::MiniMagick
 
   # Include the Sprockets helpers for Rails 3.1+ asset pipeline compatibility:
   # include Sprockets::Helpers::RailsHelper
@@ -31,16 +31,16 @@ class ArticleFileUploader < CarrierWave::Uploader::Base
   # end
 
   # Process files as they are uploaded:
-  process :scale => [200, 300]
-  process :resize_to_fit => [200, 300]
+# process :scale => [200, 300]
+# process :resize_to_fit => [200, 300]
 
-  def scale(width, height)
+# def scale(width, height)
     # Rails.logger.info "ArticleFileUploader#scale caller: #{caller[0..1].join('->')}"
     #
     # current_path # => '/var/folders/zg/..../RackMultiPart....', current_path.class -> String
     #                   might need a TempFile on heroku.
     # file.read    # => bytes, file.read.class -> String
-  end
+# end
 
 
   # Create different versions of your uploaded files:
