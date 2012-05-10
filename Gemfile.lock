@@ -1,11 +1,11 @@
 GIT
-  remote: /Users/rmichael/Documents/Personal/Source/carrierwave
-  revision: 3ef412f33e5ce46f7b0c2206eeed62b3d4175d87
-  branch: carrierwave-activerecord
+  remote: /Users/rmichael/Documents/Personal/Source/carrierwave-activerecord
+  revision: c4b4d2e064d5728d5431f21ce4f68072769bb6ee
+  branch: master
   specs:
-    carrierwave (0.6.2)
-      activemodel (>= 3.2.0)
-      activesupport (>= 3.2.0)
+    carrierwave-activerecord (0.0.1)
+      activerecord
+      carrierwave
 
 GEM
   remote: https://rubygems.org/
@@ -39,6 +39,9 @@ GEM
       multi_json (~> 1.0)
     arel (3.0.2)
     builder (3.0.0)
+    carrierwave (0.6.2)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
     coderay (1.0.6)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -122,7 +125,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  carrierwave!
+  carrierwave-activerecord!
   coffee-rails (~> 3.2.1)
   jquery-rails
   pry-rails
