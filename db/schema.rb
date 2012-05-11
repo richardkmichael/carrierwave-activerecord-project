@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(:version => 20120502122053) do
     t.string   "original_filename"
     t.string   "content_type"
     t.string   "extension"
-    t.string   "filename"
+    t.string   "identifier"
     t.string   "size"
     t.binary   "data"
     t.datetime "created_at",        :null => false

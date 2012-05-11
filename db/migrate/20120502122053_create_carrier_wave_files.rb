@@ -4,7 +4,7 @@ class CreateCarrierWaveFiles < ActiveRecord::Migration
       t.string :original_filename
       t.string :content_type
       t.string :extension
-      t.string :filename
+      t.string :identifier
       t.string :size
       t.binary :data
 

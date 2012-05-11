@@ -1,7 +1,5 @@
 # encoding: utf-8
 
-require 'pry'
-
 class ArticleFileUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
