@@ -1,5 +1,3 @@
-require 'pry'
-
 class ArticleFilesController < ApplicationController
 
   # WARNING: Exposes all your files, without any security checks.
