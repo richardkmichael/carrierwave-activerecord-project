@@ -1,7 +1,5 @@
-GIT
+PATH
   remote: /Users/rmichael/Documents/Personal/Source/carrierwave-activerecord
-  revision: c4b4d2e064d5728d5431f21ce4f68072769bb6ee
-  branch: master
   specs:
     carrierwave-activerecord (0.0.1)
       activerecord
