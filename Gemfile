@@ -17,4 +17,5 @@ end
 
 group :development do
   gem 'pry-rails'
+  gem 'pry-stack_explorer'
 end

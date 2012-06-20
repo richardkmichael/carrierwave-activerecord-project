@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120502122053) do
+ActiveRecord::Schema.define(:version => 20120601131704) do
+
+  create_table "article_files", :force => true do |t|
+    t.string   "file"
+    t.integer  "article_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "article_files", ["article_id"], :name => "index_article_files_on_article_id"
 
   create_table "articles", :force => true do |t|
     t.string   "title"
