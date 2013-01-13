@@ -1,5 +1,3 @@
-require 'pry'
-
 class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
@@ -47,7 +45,6 @@ class ArticlesController < ApplicationController
   # POST /articles
   # POST /articles.json
   def create
-    # binding.pry
 
     @article = Article.new(params[:article])
 
