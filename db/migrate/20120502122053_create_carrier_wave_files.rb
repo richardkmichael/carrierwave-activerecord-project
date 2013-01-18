@@ -6,7 +6,7 @@ class CreateCarrierWaveFiles < ActiveRecord::Migration
       t.string :extension
       t.string :identifier
       t.string :size
-      t.binary :data
+      t.binary :data #, :limit => 150.kilobytes
 
       t.timestamps
     end

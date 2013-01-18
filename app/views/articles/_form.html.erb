@@ -20,20 +20,12 @@
   </div>
 
   <div class="field">
-    <%= f.fields_for :article_files do |article_file| %>
-      <%= article_file.label      :file, 'One' %>
-      <%= article_file.file_field :file %>
-    <% end %>
-  </div>
-
-  <div class="field">
-    <%= f.fields_for :article_files do |article_file| %>
-      <%= article_file.label      :file, 'Two' %>
-      <%= article_file.file_field :file %>
-    <% end %>
+    <%= f.label      :file, 'File' %><br />
+    <%= f.file_field :file %>
   </div>
 
   <div class="actions">
     <%= f.submit %>
   </div>
+
 <% end %>
