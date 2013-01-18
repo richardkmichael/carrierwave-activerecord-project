@@ -1,3 +1,5 @@
+require 'pry'
+
 class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
@@ -13,10 +15,10 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
-    @article = Article.find(params[:id])#.includes(:article_files)
+    @article = Article.find(params[:id])
 
-    # FIXME: This is horrible.  @url_prefix is used in view with a manual <a href=... >.
-    @url_prefix = 'http://' + request.host_with_port
+    # FIXME: Horrible: @url_prefix is used in view with a manual <a href=... >.
+    @url_prefix = "http://#{request.host_with_port}/articles/#{@article.id}/files"
 
     respond_to do |format|
       format.html # show.html.erb
@@ -47,7 +49,6 @@ class ArticlesController < ApplicationController
   def create
 
     @article = Article.new(params[:article])
-
 
     respond_to do |format|
       if @article.save

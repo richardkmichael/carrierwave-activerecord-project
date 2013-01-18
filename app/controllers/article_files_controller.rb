@@ -7,7 +7,7 @@ class ArticleFilesController < ApplicationController
     # article = Article.find(params[:id])
 
     # The model has_many files.
-    article_file = ArticleFile.find(params[:id])
+    article_file = ArticleFile.find(params[:identifier])
     send_data(article_file.file.read)
   end
 
