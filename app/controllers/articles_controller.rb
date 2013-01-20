@@ -15,8 +15,11 @@ class ArticlesController < ApplicationController
   def show
     @article = Article.find(params[:id])
 
-    # FIXME: This is horrible.  @url_prefix is used in view with a manual <a href=... >.
+    # FIXME: Used in view with a manual <a href=... >, fix CarrierWave's .url method.
+    #    OR: the member route gives us a helper?
     @url_prefix = 'http://' + request.host_with_port
+#   @file_url = "#{@url_prefix}/articles/#{@article.id}/file/#{@article.file_identifier}"
+    @file_url = "#{@url_prefix}/articles/#{@article.id}/file"
 
     respond_to do |format|
       format.html # show.html.erb
@@ -84,15 +87,18 @@ class ArticlesController < ApplicationController
     end
   end
 
-# # WARNING: Exposes all your files, without any security checks.
-# def file
+  def file
 
-#   # A file mounted directly on the model.
-#   # article = Article.find(params[:id])
+    # A file mounted directly on the model.
+    article = Article.find(params[:id])
 
-#   # The model has_many files.
-#   article_file = ArticleFile.find(params[:id])
-#   send_data(article_file.file.read)
-# end
+#   binding.pry
+
+    # FIXME: The filename() method exists (from CarrierWave?), but returns `nil`...?
+    #        Should the uploader proxy to the file?  Are any methods already proxied?
+#   send_data(article.file.read, :filename => article.file.filename)
+    send_data(article.file.read, :filename => article.file.file.original_filename)
+
+  end
 
 end

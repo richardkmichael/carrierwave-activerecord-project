@@ -3,9 +3,7 @@
   <%= @article.title %>
 </div>
 
-  <div>
-    <b>File:</b>
-    <a href='<%= "#{@url_prefix}#{@article.file}" %>'><%= "#{@url_prefix}#{@article.file}" %></a>
-  </div>
-
-<% end %>
+<div>
+  <b>File:</b>
+  <a href='<%= file_article_url(@article)  %>'><%= file_article_url(@article) %></a>
+</div>
