@@ -15,12 +15,6 @@ class ArticlesController < ApplicationController
   def show
     @article = Article.find(params[:id])
 
-    # FIXME: Used in view with a manual <a href=... >, fix CarrierWave's .url method.
-    #    OR: the member route gives us a helper?
-    @url_prefix = 'http://' + request.host_with_port
-#   @file_url = "#{@url_prefix}/articles/#{@article.id}/file/#{@article.file_identifier}"
-    @file_url = "#{@url_prefix}/articles/#{@article.id}/file"
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @article }
