@@ -21,14 +21,11 @@ ActiveRecord::Schema.define(:version => 20120502122053) do
   end
 
   create_table "carrier_wave_files", :force => true do |t|
-    t.string   "original_filename"
-    t.string   "content_type"
-    t.string   "extension"
     t.string   "identifier"
-    t.string   "size"
+    t.string   "filename"
     t.binary   "data"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end
