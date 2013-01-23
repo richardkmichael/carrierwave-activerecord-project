@@ -5,5 +5,5 @@
 
 <div>
   <b>File:</b>
-  <%= link_to @article.file.file.filename, file_article_url(@article) %>
+  <%= link_to @article.file.filename, @article.file_url %>
 </div>
