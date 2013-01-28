@@ -3,8 +3,8 @@ source :rubygems
 gem 'rails'
 gem 'sqlite3'
 gem 'jquery-rails'
+gem 'carrierwave',              :path => '/Users/rmichael/Documents/Personal/Source/carrierwave'
 gem 'carrierwave-activerecord', :path => '/Users/rmichael/Documents/Personal/Source/carrierwave-activerecord'
-gem 'carrierwave', :path => '/Users/rmichael/Documents/Personal/Source/carrierwave'
 
 group :assets do
   gem 'sass-rails'

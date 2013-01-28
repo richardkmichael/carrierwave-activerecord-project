@@ -8,7 +8,7 @@ PATH
 PATH
   remote: /Users/rmichael/Documents/Personal/Source/carrierwave-activerecord
   specs:
-    carrierwave-activerecord (0.0.1)
+    carrierwave-activerecord (0.0.10)
       activerecord
       carrierwave
 
