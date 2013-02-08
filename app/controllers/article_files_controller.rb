@@ -1,14 +1,9 @@
 class ArticleFilesController < ApplicationController
 
-  # WARNING: Exposes all your files, without any security checks.
-  def show
+  def file
+    article = Article.find(params[:id])
 
-    # A file mounted directly on the model.
-    # article = Article.find(params[:id])
-
-    # The model has_many files.
-    article_file = ArticleFile.find(params[:identifier])
-    send_data(article_file.file.read)
+    send_data(article.file.read, :filename => article.file.file.filename)
   end
 
 end

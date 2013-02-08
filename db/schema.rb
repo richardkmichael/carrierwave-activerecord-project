@@ -20,8 +20,6 @@ ActiveRecord::Schema.define(:version => 20120601131704) do
     t.datetime "updated_at", :null => false
   end
 
-  add_index "article_files", ["article_id"], :name => "index_article_files_on_article_id"
-
   create_table "articles", :force => true do |t|
     t.string   "title"
     t.string   "file"

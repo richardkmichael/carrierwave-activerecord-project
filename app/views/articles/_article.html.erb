@@ -4,9 +4,8 @@
 </div>
 
 <% @article.article_files.each do |article_file| %>
-  <% article_file_link = "#{@url_prefix}/#{article_file.file.identifier}" %>
   <div>
     <b>File:</b>
-    <a href='<%= article_file_link %>'><%= article_file_link %></a>
+    <%= link_to article_file.file.file.filename, article_file.file_url %>
   </div>
 <% end %>

@@ -1,9 +1,16 @@
 PATH
+  remote: /Users/rmichael/Documents/Personal/Source/carrierwave
+  specs:
+    carrierwave (0.8.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+
+PATH
   remote: /Users/rmichael/Documents/Personal/Source/carrierwave-activerecord
   specs:
-    carrierwave-activerecord (0.0.1)
-      activerecord
-      carrierwave
+    carrierwave-activerecord (0.1.0rc1)
+      activerecord (~> 3.2.0)
+      carrierwave (~> 0.8.0)
 
 GEM
   remote: http://rubygems.org/
@@ -36,11 +43,11 @@ GEM
       i18n (~> 0.6)
       multi_json (~> 1.0)
     arel (3.0.2)
+    better_errors (0.3.2)
+      coderay (>= 1.0.0)
+      erubis (>= 2.7.0)
     binding_of_caller (0.6.8)
     builder (3.0.4)
-    carrierwave (0.8.0)
-      activemodel (>= 3.2.0)
-      activesupport (>= 3.2.0)
     coderay (1.0.8)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -100,7 +107,6 @@ GEM
     rake (10.0.3)
     rdoc (3.12)
       json (~> 1.4)
-    rmagick (2.13.1)
     sass (3.2.5)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
@@ -127,13 +133,15 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  better_errors
+  binding_of_caller
+  carrierwave!
   carrierwave-activerecord!
   coffee-rails
   jquery-rails
   pry-rails
   pry-stack_explorer
   rails
-  rmagick
   sass-rails
   sqlite3
   uglifier

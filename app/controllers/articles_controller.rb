@@ -18,7 +18,7 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
 
     # FIXME: Horrible: @url_prefix is used in view with a manual <a href=... >.
-    @url_prefix = "http://#{request.host_with_port}/articles/#{@article.id}/files"
+#   @url_prefix = "http://#{request.host_with_port}/articles/#{@article.id}/files"
 
     respond_to do |format|
       format.html # show.html.erb

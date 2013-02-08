@@ -1,10 +1,7 @@
-# Permits multiple files per article.
 class ArticleFile < ActiveRecord::Base
+  belongs_to :article
 
   attr_accessible :file
 
-  belongs_to :article
-
-  mount_uploader :file, ArticleFileUploader
-
+  mount_uploader  :file, ArticleFileUploader
 end
