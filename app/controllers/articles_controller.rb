@@ -84,9 +84,6 @@ class ArticlesController < ApplicationController
   def file
     article = Article.find(params[:id])
 
-    # FIXME: The filename() method exists (from CarrierWave?), but returns `nil`...?
-    #        Should the uploader proxy to the file?  Are any methods already proxied?
-    # send_data(article.file.read, :filename => article.file.filename)
-    send_data(article.file.file, :filename => article.file.filename)
+    send_data(article.file.read, :filename => article.file.file.filename)
   end
 end
